@@ -1,16 +1,17 @@
 package desafios;
 
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
 
-public class desafio01 {
+public class Desafio04 {
     public static void main(String[] args) {
         List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 5, 4, 3);
 
-        // Desafio 1 - Mostre a lista na ordem numérica:
-        numeros.sort(Comparator.naturalOrder());
+        // Desafio 4 - Remova todos os valores ímpares
+        numeros.stream()
+                .filter(n -> n % 2 == 0)
+                .forEach(System.out::println);
 
-        System.out.println(numeros);
     }
+
 }
